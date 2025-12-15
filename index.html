@@ -1,127 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>2nd Terengganu Allied Health Practitioners Conference</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            background: #f4f6f8;
-        }
-        header {
-            background: #0a5c6d;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        nav {
-            background: #083f4a;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 6px;
-        }
-        h2 {
-            color: #0a5c6d;
-        }
-        .speaker {
-            margin-bottom: 15px;
-        }
-        footer {
-            background: #083f4a;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-        .btn {
-            display: inline-block;
-            background: #0a5c6d;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>2nd Terengganu AHP Scientific Conference</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: linear-gradient(120deg, #0a5c6d, #0f8fa5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.join-text {
+    font-size: 48px;
+    font-weight: bold;
+    animation: fadeSlide 2s ease;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.conference-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.conference-title img {
+    width: 80px;
+}
+
+.conference-title h1 {
+    font-size: 28px;
+    max-width: 500px;
+    line-height: 1.4;
+}
+
+/* SECTION GENERAL */
+.section {
+    padding: 70px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    color: #0a5c6d;
+    margin-bottom: 40px;
+}
+
+/* PRESIDENT SECTION */
+.president {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.president img {
+    width: 260px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.president-text {
+    flex: 1;
+}
+
+.president-text h3 {
+    margin-top: 0;
+    color: #0a5c6d;
+}
+
+/* DETAILS SECTION */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.detail-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.detail-box h4 {
+    margin-top: 0;
+    color: #0a5c6d;
+}
+
+footer {
+    background: #083f4a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>2nd Terengganu Allied Health Practitioners Conference</h1>
-    <p>Date: To Be Confirmed | Venue: Terengganu</p>
-</header>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="join-text">Let’s Join</div>
 
-<nav>
-    <a href="#about">Introduction</a>
-    <a href="#speakers">Speakers</a>
-    <a href="#tentative">Tentative</a>
-    <a href="#submission">Paper Submission</a>
-</nav>
-
-<section id="about">
-    <h2>Introduction</h2>
-    <p>
-        The 2nd Terengganu Allied Health Practitioners Conference aims to bring together
-        allied health professionals to share knowledge, research findings, and best practices
-        in improving healthcare services.
-    </p>
-</section>
-
-<section id="speakers">
-    <h2>Speakers</h2>
-    <div class="speaker">
-        <strong>Dr. Name 1</strong><br>
-        Institution / Hospital
-    </div>
-    <div class="speaker">
-        <strong>Mr / Ms Name 2</strong><br>
-        Institution / Hospital
+        <div class="conference-title">
+            <img src="images/logo-left.png" alt="Logo Left">
+            <h1>
+                2nd TERENGGANU ALLIED HEALTH PROFESSIONAL (AHP)
+                SCIENTIFIC CONFERENCE
+            </h1>
+            <img src="images/logo-right.png" alt="Logo Right">
+        </div>
     </div>
 </section>
 
-<section id="tentative">
-    <h2>Tentative Programme</h2>
-    <p>
-        The tentative programme will include keynote sessions, oral presentations,
-        and poster presentations.
-    </p>
-    <p>
-        📄 <a href="#" class="btn">Download Tentative (PDF)</a>
-    </p>
+<!-- PRESIDENT MESSAGE -->
+<section class="section">
+    <h2>Welcome Message</h2>
+    <div class="president">
+        <img src="images/president.jpg" alt="President AHP Terengganu">
+        <div class="president-text">
+            <h3>President, Allied Health Practitioners Terengganu</h3>
+            <p>
+                Welcome to the 2nd Terengganu Allied Health Professional Scientific Conference.
+                This conference aims to provide a platform for allied health professionals
+                to share research findings, clinical experiences, and innovations that
+                contribute to quality healthcare services.
+            </p>
+            <p>
+                We look forward to your active participation and meaningful knowledge exchange.
+            </p>
+        </div>
+    </div>
 </section>
 
-<section id="submission">
-    <h2>Paper Submission</h2>
-    <p>
-        Authors are invited to submit abstracts related to allied health practice,
-        research, and innovation.
-    </p>
-    <p>
-        👉 Submit your paper using the link below:
-    </p>
-    <p>
-        <a href="https://forms.google.com" class="btn">Submit Abstract</a>
-    </p>
+<!-- CONFERENCE DETAILS -->
+<section class="section">
+    <h2>Conference Details</h2>
+
+    <div class="details-grid">
+
+        <div class="detail-box">
+            <h4>Date</h4>
+            <p>To be confirmed</p>
+        </div>
+
+        <div class="detail-box">
+            <h4>Venue</h4>
+            <p>Terengganu, Malaysia</p>
+        </div>
+
+        <div class="detail-box">
+            <h4>Slogan</h4>
+            <p>Empowering Allied Health Through Research & Innovation</p>
+        </div>
+
+        <div class="detail-box">
+            <h4>Category</h4>
+            <ul>
+                <li>Oral Research</li>
+                <li>Oral Case Study</li>
+                <li>Poster</li>
+            </ul>
+        </div>
+
+        <div class="detail-box">
+            <h4>Registration Fees</h4>
+            <p>
+                Member: RM XXX<br>
+                Non-member: RM XXX<br>
+                Student: RM XXX
+            </p>
+        </div>
+
+        <div class="detail-box">
+            <h4>Important Dates</h4>
+            <p>
+                Abstract Submission: DD/MM/YYYY<br>
+                Acceptance Notification: DD/MM/YYYY<br>
+                Conference Date: DD/MM/YYYY
+            </p>
+        </div>
+
+    </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Terengganu Allied Health Practitioners Conference</p>
+    &copy; 2026 Terengganu Allied Health Practitioners Conference
 </footer>
 
 </body>
 </html>
-
