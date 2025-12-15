@@ -144,7 +144,7 @@ body {
     margin: auto;
 }
 
-/* WELCOME */
+/* WELCOME - side by side */
 #welcome {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -156,6 +156,10 @@ body {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+#welcome .welcome-text {
+    text-align: left;
 }
 
 #welcome h2 {
@@ -290,6 +294,10 @@ footer {
         text-align: center;
     }
 
+    #welcome .welcome-text {
+        text-align: center;
+    }
+
     .floating-buttons {
         right: 10px;
     }
@@ -376,7 +384,7 @@ footer {
 <section id="welcome" class="section animate">
     <div class="welcome">
         <img src="images/president.jpg" alt="President AHP Terengganu">
-        <div>
+        <div class="welcome-text">
             <h2>Welcome Message</h2>
             <h3>President, Allied Health Practitioners Negeri Terengganu</h3>
             <p>
