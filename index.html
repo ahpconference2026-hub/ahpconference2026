@@ -43,7 +43,7 @@ body {
     color: #e0f2f1;
 }
 
-/* FLOATING BUTTONS */
+/* FLOATING BUTTONS - BIG & INVITING */
 .floating-buttons {
     position: fixed;
     right: 20px;
@@ -52,52 +52,41 @@ body {
     z-index: 999;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px;
 }
 
 .floating-buttons a {
     text-decoration: none;
-    padding: 14px 18px;
+    padding: 20px 25px;
     background: linear-gradient(135deg, #0a5c6d, #0f8a99);
     color: white;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 40px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
 .floating-buttons a:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #0f8a99, #0a5c6d);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-/* Hero Section */
+/* HERO - PARALLAX */
 .hero {
     min-height: 100vh;
     position: relative;
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("images/hero-bg.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
     padding: 40px 20px;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: url("images/hero-bg.jpg") center/cover no-repeat;
-    z-index: -1;
-    transform: translateY(0px);
-    will-change: transform;
 }
 
 .hero-content {
@@ -196,7 +185,7 @@ body {
     color: #4b5563;
 }
 
-/* DETAILS */
+/* CONFERENCE DETAILS */
 #details {
     background: #f8fafc;
     text-align: center;
@@ -241,12 +230,11 @@ body {
     font-size: 18px;
     color: #0a5c6d;
     transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
 }
 
 .category-box:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* REGISTRATION FEES */
@@ -407,14 +395,14 @@ footer {
 
 <!-- FLOATING BUTTONS -->
 <div class="floating-buttons">
-    <a href="https://forms.google.com" target="_blank">Register</a>
+    <a href="https://forms.google.com" target="_blank">Register Now</a>
     <a href="https://forms.google.com" target="_blank">Submit Abstract</a>
 </div>
 
 <!-- HERO -->
 <section id="hero" class="hero">
     <div class="hero-content">
-        <div class="join-text" id="hero-text">Let’s Join</div>
+        <div class="join-text">Let’s Join</div>
         <div class="title-row">
             <img src="images/logo-left.png" alt="Logo Left">
             <div class="title-block">
@@ -422,7 +410,7 @@ footer {
                     2nd TERENGGANU ALLIED HEALTH PROFESSIONAL (AHP)<br>
                     SCIENTIFIC CONFERENCE
                 </h1>
-                <div class="slogan" id="hero-slogan">
+                <div class="slogan">
                     Empowering Allied Health Professional:<br> 
                     Leading Change for Better Health Outcomes
                 </div>
@@ -511,7 +499,7 @@ footer {
 </footer>
 
 <script>
-// STAGGERED SCROLL ANIMATION
+// SCROLL ANIMATION
 const elements = document.querySelectorAll('.animate');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -520,33 +508,7 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 }, { threshold: 0.15 });
-
-elements.forEach((el, index) => {
-    el.style.transitionDelay = `${index * 0.2}s`;
-    observer.observe(el);
-});
-
-// PARALLAX HERO
-const hero = document.querySelector('.hero::before');
-window.addEventListener('scroll', () => {
-    document.querySelector('.hero::before');
-    const scrollY = window.scrollY;
-    document.querySelector('.hero::before').style.transform = `translateY(${scrollY * 0.2}px)`;
-});
-
-// HERO TEXT ANIMATION
-const slogans = [
-    "Empowering Allied Health Professional: Leading Change for Better Health Outcomes",
-    "Collaborate, Innovate, Inspire",
-    "Advancing Health Together"
-];
-let current = 0;
-const heroSlogan = document.getElementById('hero-slogan');
-
-setInterval(() => {
-    current = (current + 1) % slogans.length;
-    heroSlogan.innerText = slogans[current];
-}, 4000);
+elements.forEach(el => observer.observe(el));
 </script>
 
 </body>
