@@ -144,16 +144,17 @@ body {
     margin: auto;
 }
 
-/* WELCOME - side by side */
+/* WELCOME - side by side with president photo */
 #welcome {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 400px 1fr; /* Image fixed width, text fills remaining space */
     gap: 60px;
     align-items: center;
 }
 
 #welcome img {
     width: 100%;
+    max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
