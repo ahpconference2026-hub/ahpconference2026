@@ -21,6 +21,7 @@
             --whatsapp-green: #25D366;
             --red-accent: #e74c3c;
             --dark-blue: #0d1b36;
+            --calendar-blue: #1a73e8;
         }
         
         body {
@@ -171,8 +172,11 @@
             font-weight: 500;
         }
         
+        /* CONFERENCE DATE BADGE - WITH CALENDAR LINK */
         .conference-date-badge {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
             background: var(--accent-color);
             color: var(--dark-blue);
             padding: 15px 30px;
@@ -181,191 +185,149 @@
             font-size: 18px;
             margin-top: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* FLOATING BUTTONS */
-        .floating-buttons {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 999;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .floating-buttons a {
             text-decoration: none;
-            padding: 20px 25px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            font-size: 16px;
-            font-weight: 700;
-            border-radius: 40px;
-            text-align: center;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .floating-buttons a:hover {
-            background: linear-gradient(135deg, var(--accent-color), #ffde59);
-            color: var(--dark-blue);
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* HERO - SUMMIT STYLE */
-        .hero {
-            min-height: 100vh;
+            transition: all 0.3s ease;
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 40px 20px;
             overflow: hidden;
-            background: linear-gradient(135deg, rgba(17, 32, 69, 0.92), rgba(26, 125, 140, 0.88)), 
-                        url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(248, 201, 28, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-            z-index: 1;
-        }
-        
-        .hero-content {
-            max-width: 1000px;
-            animation: fadeUp 1.6s ease;
-            z-index: 2;
-            position: relative;
-        }
-        
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .hero-title {
-            font-size: 65px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin: 0 0 25px 0;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-        
-        .hero-title span {
-            color: var(--accent-color);
-        }
-        
-        /* SCIENTIFIC CONFERENCE BUBBLE - MOVED BELOW TITLE */
-        .conference-tag {
-            display: inline-block;
-            background: var(--accent-color);
-            color: var(--dark-blue);
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 24px;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .hero-subtitle {
-            font-size: 28px;
-            font-weight: 400;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.4;
-            opacity: 0.95;
-        }
-        
-        .hero-date {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .hero-date i {
-            color: var(--accent-color);
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
-        
-        .hero-btn {
-            padding: 18px 35px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 18px;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .btn-primary {
-            background: var(--accent-color);
-            color: var(--dark-blue);
-            box-shadow: 0 8px 25px rgba(248, 201, 28, 0.3);
-        }
-        
-        .btn-primary:hover {
+        .conference-date-badge:hover {
             background: #ffde59;
             transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(248, 201, 28, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
         }
         
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
+        .conference-date-badge::after {
+            content: '📅 Click to add to Google Calendar';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--dark-blue);
+            opacity: 0;
+            transition: all 0.3s ease;
         }
         
-        .btn-secondary:hover {
-            background: white;
+        .conference-date-badge:hover::after {
+            top: 50%;
+            opacity: 1;
+        }
+        
+        .conference-date-badge:hover .badge-text {
+            opacity: 0;
+        }
+        
+        .badge-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s ease;
+        }
+        
+        /* CALENDAR HINT TEXT */
+        .calendar-hint {
+            display: block;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        /* CALENDAR LINK STYLES */
+        .calendar-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--calendar-blue);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 6px;
+            background: rgba(26, 115, 232, 0.1);
+            transition: all 0.3s ease;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+        
+        .calendar-link:hover {
+            background: rgba(26, 115, 232, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .calendar-link i {
+            font-size: 16px;
+        }
+        
+        /* TIMELINE ITEMS WITH CALENDAR LINKS */
+        .timeline-date {
+            font-weight: 800;
             color: var(--primary-color);
-            transform: translateY(-3px);
+            font-size: 20px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .timeline-date-text {
+            flex: 1;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--accent-color);
+            position: relative;
+        }
+        
+        .timeline-content p {
+            margin: 0;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        
+        /* CALENDAR TOOLTIP */
+        .calendar-tooltip {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--calendar-blue);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .calendar-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--calendar-blue) transparent transparent transparent;
+        }
+        
+        .calendar-link:hover + .calendar-tooltip {
+            opacity: 1;
+            visibility: visible;
+            top: -45px;
         }
         
         /* SECTIONS */
@@ -597,27 +559,6 @@
             border: 5px solid var(--timeline-color);
             border-radius: 50%;
             z-index: 2;
-        }
-        
-        .timeline-date {
-            font-weight: 800;
-            color: var(--primary-color);
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-        
-        .timeline-content {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            border-left: 5px solid var(--accent-color);
-        }
-        
-        .timeline-content p {
-            margin: 0;
-            line-height: 1.6;
-            font-size: 18px;
         }
         
         /* INVITED SPEAKERS */
@@ -1139,6 +1080,16 @@
             .contact-info-whatsapp {
                 text-align: center;
             }
+            
+            .timeline-date {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .calendar-link {
+                margin-left: 0;
+            }
         }
         
         @media(max-width: 768px) {
@@ -1251,6 +1202,15 @@
             .countdown-title {
                 font-size: 28px;
             }
+            
+            .conference-date-badge {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+            
+            .conference-date-badge::after {
+                font-size: 10px;
+            }
         }
         
         @media(max-width: 400px) {
@@ -1275,6 +1235,11 @@
             .category-box {
                 padding: 25px 15px;
                 font-size: 16px;
+            }
+            
+            .calendar-link {
+                font-size: 12px;
+                padding: 4px 8px;
             }
         }
     </style>
@@ -1342,9 +1307,16 @@
         <div class="countdown-note">
             Mark your calendar for the premier Allied Health event in Terengganu
         </div>
-        <div class="conference-date-badge">
-            <i class="fas fa-calendar-check"></i> September 22-23, 2026
-        </div>
+        <!-- CONFERENCE DATE WITH CALENDAR LINK -->
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=2nd%20Terengganu%20AHP%20Scientific%20Conference&dates=20260922T090000/20260923T170000&details=2nd%20Terengganu%20Allied%20Health%20Professional%20Scientific%20Conference%20at%20Ar-Riyadah%20Residence%2C%20Kuala%20Nerus%2C%20Terengganu.%20Theme%3A%20Empowering%20Allied%20Health%20Professional%3A%20Leading%20Change%20for%20Better%20Health%20Outcomes&location=Ar-Riyadah%20Residence%2C%20Kuala%20Nerus%2C%20Terengganu%2C%20Malaysia&sf=true&output=xml" 
+           target="_blank" 
+           class="conference-date-badge"
+           title="Click to add to your Google Calendar">
+            <span class="badge-text">
+                <i class="fas fa-calendar-check"></i> September 22-23, 2026
+            </span>
+        </a>
+        <span class="calendar-hint">(Click the date above to add to your Google Calendar)</span>
     </div>
     
     <!-- WELCOME -->
@@ -1453,31 +1425,76 @@
         <h3 class="details-header">Important Dates</h3>
         <div class="timeline animate">
             <div class="timeline-item">
-                <div class="timeline-date">2 January 2026</div>
+                <div class="timeline-date">
+                    <span class="timeline-date-text">2 January 2026</span>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Abstract%20%26%20e-Poster%20Submission%20Opens%20-%20Terengganu%20AHP%20Conference&dates=20260102T000000/20260102T235959&details=Abstract%20%26%20e-Poster%20Submission%20opens%20for%20the%202nd%20Terengganu%20AHP%20Scientific%20Conference&location=Online&sf=true&output=xml" 
+                       target="_blank" 
+                       class="calendar-link"
+                       title="Add to Google Calendar">
+                        <i class="fas fa-calendar-plus"></i> Add to Calendar
+                    </a>
+                    <div class="calendar-tooltip">Click to set reminder</div>
+                </div>
                 <div class="timeline-content">
                     <p>Abstract & e-Poster Submission opens</p>
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">2 January 2026</div>
+                <div class="timeline-date">
+                    <span class="timeline-date-text">2 January 2026</span>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Registration%20Opens%20-%20Terengganu%20AHP%20Conference&dates=20260102T000000/20260102T235959&details=Registration%20opens%20for%20the%202nd%20Terengganu%20AHP%20Scientific%20Conference&location=Online&sf=true&output=xml" 
+                       target="_blank" 
+                       class="calendar-link"
+                       title="Add to Google Calendar">
+                        <i class="fas fa-calendar-plus"></i> Add to Calendar
+                    </a>
+                    <div class="calendar-tooltip">Click to set reminder</div>
+                </div>
                 <div class="timeline-content">
                     <p>Registration opens</p>
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">31 March 2026</div>
+                <div class="timeline-date">
+                    <span class="timeline-date-text">31 March 2026</span>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Abstract%20Submission%20Deadline%20-%20Terengganu%20AHP%20Conference&dates=20260331T235900/20260331T235959&details=Final%20deadline%20for%20abstract%20submission%20for%20the%202nd%20Terengganu%20AHP%20Scientific%20Conference&location=Online&sf=true&output=xml" 
+                       target="_blank" 
+                       class="calendar-link"
+                       title="Add to Google Calendar">
+                        <i class="fas fa-calendar-plus"></i> Add to Calendar
+                    </a>
+                    <div class="calendar-tooltip">Click to set reminder</div>
+                </div>
                 <div class="timeline-content">
                     <p>Abstract Submission deadline</p>
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">31 March 2026</div>
+                <div class="timeline-date">
+                    <span class="timeline-date-text">31 March 2026</span>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=e-Poster%20Submission%20Deadline%20-%20Terengganu%20AHP%20Conference&dates=20260331T235900/20260331T235959&details=Final%20deadline%20for%20e-Poster%20submission%20for%20the%202nd%20Terengganu%20AHP%20Scientific%20Conference&location=Online&sf=true&output=xml" 
+                       target="_blank" 
+                       class="calendar-link"
+                       title="Add to Google Calendar">
+                        <i class="fas fa-calendar-plus"></i> Add to Calendar
+                    </a>
+                    <div class="calendar-tooltip">Click to set reminder</div>
+                </div>
                 <div class="timeline-content">
                     <p>e-Poster Submission deadline</p>
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">22 June 2026</div>
+                <div class="timeline-date">
+                    <span class="timeline-date-text">22 June 2026</span>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Registration%20Deadline%20-%20Terengganu%20AHP%20Conference&dates=20260622T235900/20260622T235959&details=Final%20registration%20deadline%20for%20the%202nd%20Terengganu%20AHP%20Scientific%20Conference&location=Online&sf=true&output=xml" 
+                       target="_blank" 
+                       class="calendar-link"
+                       title="Add to Google Calendar">
+                        <i class="fas fa-calendar-plus"></i> Add to Calendar
+                    </a>
+                    <div class="calendar-tooltip">Click to set reminder</div>
+                </div>
                 <div class="timeline-content">
                     <p>Registration deadline</p>
                 </div>
@@ -1699,6 +1716,18 @@
                     this.innerHTML = '<i class="fas fa-map-marked-alt"></i> View on Google Maps';
                 });
             }
+        });
+        
+        // Calendar link analytics (optional - can be used to track clicks)
+        document.querySelectorAll('.calendar-link, .conference-date-badge').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Calendar link clicked:', this.href);
+                // You can add Google Analytics tracking here
+                // gtag('event', 'calendar_add', {
+                //   'event_category': 'engagement',
+                //   'event_label': this.title || 'Conference Date'
+                // });
+            });
         });
     </script>
 </body>
