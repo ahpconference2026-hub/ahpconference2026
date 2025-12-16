@@ -100,7 +100,7 @@
             width: 100%;
         }
         
-        /* COUNTDOWN TIMER - Summit Style */
+        /* COUNTDOWN TIMER - Summit Style - HORIZONTAL LAYOUT */
         .countdown-container {
             background: linear-gradient(135deg, rgba(17, 32, 69, 0.9), rgba(26, 125, 140, 0.85));
             padding: 70px 20px;
@@ -121,10 +121,11 @@
         .countdown {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 25px;
-            flex-wrap: wrap;
-            max-width: 800px;
-            margin: 0 auto;
+            flex-wrap: nowrap;
+            max-width: 900px;
+            margin: 0 auto 30px auto;
         }
         
         .countdown-item {
@@ -132,11 +133,12 @@
             backdrop-filter: blur(10px);
             border-radius: 12px;
             padding: 30px 20px;
-            min-width: 140px;
+            min-width: 150px;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s;
+            flex: 1;
         }
         
         .countdown-item:hover {
@@ -266,20 +268,6 @@
             }
         }
         
-        .conference-tag {
-            display: inline-block;
-            background: var(--accent-color);
-            color: var(--dark-blue);
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 18px;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
         .hero-title {
             font-size: 65px;
             font-weight: 800;
@@ -292,6 +280,21 @@
         
         .hero-title span {
             color: var(--accent-color);
+        }
+        
+        /* SCIENTIFIC CONFERENCE BUBBLE - MOVED BELOW TITLE */
+        .conference-tag {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--dark-blue);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .hero-subtitle {
@@ -486,10 +489,10 @@
             text-transform: uppercase;
         }
         
-        /* CATEGORY GRID */
+        /* CATEGORY GRID - 3 CATEGORIES ONLY */
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
             max-width: 900px;
             margin: 0 auto 50px auto;
@@ -499,7 +502,7 @@
             background: #ffffff;
             border: 3px solid var(--primary-color);
             border-radius: 12px;
-            padding: 35px 20px;
+            padding: 40px 20px;
             text-align: center;
             font-weight: 700;
             font-size: 20px;
@@ -1027,6 +1030,10 @@
             .hero-subtitle {
                 font-size: 24px;
             }
+            
+            .conference-tag {
+                font-size: 22px;
+            }
         }
         
         @media(max-width: 900px) {
@@ -1065,8 +1072,13 @@
                 font-size: 28px;
             }
             
+            .category-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+            
             .category-box {
-                padding: 25px 15px;
+                padding: 30px 15px;
                 font-size: 18px;
             }
             
@@ -1097,7 +1109,7 @@
             }
             
             .countdown-item {
-                min-width: 110px;
+                min-width: 120px;
                 padding: 25px 15px;
             }
             
@@ -1126,6 +1138,22 @@
             
             .contact-info-whatsapp {
                 text-align: center;
+            }
+        }
+        
+        @media(max-width: 768px) {
+            .category-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+            
+            .countdown {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            
+            .countdown-item {
+                min-width: calc(50% - 20px);
             }
         }
         
@@ -1187,6 +1215,11 @@
                 font-size: 18px;
             }
             
+            .conference-tag {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+            
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -1203,7 +1236,7 @@
             }
             
             .countdown-item {
-                min-width: 90px;
+                min-width: calc(50% - 15px);
                 padding: 20px 10px;
             }
             
@@ -1226,7 +1259,7 @@
             }
             
             .countdown-item {
-                min-width: 75px;
+                min-width: calc(50% - 10px);
                 padding: 15px 8px;
             }
             
@@ -1237,6 +1270,11 @@
             .nav-container {
                 gap: 15px;
                 font-size: 14px;
+            }
+            
+            .category-box {
+                padding: 25px 15px;
+                font-size: 16px;
             }
         }
     </style>
@@ -1258,11 +1296,11 @@
     <!-- HERO -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <div class="conference-tag">Scientific Conference</div>
             <h1 class="hero-title">
                 2nd <span>TERENGGANU</span><br>
                 ALLIED HEALTH PROFESSIONAL
             </h1>
+            <div class="conference-tag">SCIENTIFIC CONFERENCE</div>
             <div class="hero-subtitle">
                 Empowering Allied Health Professional: Leading Change for Better Health Outcomes
             </div>
@@ -1380,13 +1418,13 @@
             </div>
             <div class="speaker-box animate">
                 <img src="images/speaker3.jpg" alt="Speaker 3">
-                <h4>EJEN ALI</h4>
-                <div class="speaker-title">EJEN MAHARAYA</div>
-                <p class="speaker-topic">Topic: Yoyo lesson</p>
+                <h4>Dr. Sarah Johnson</h4>
+                <div class="speaker-title">Healthcare Policy Expert</div>
+                <p class="speaker-topic">Topic: Future Trends in Allied Health Practice</p>
             </div>
         </div>
         
-        <!-- CATEGORY -->
+        <!-- CATEGORY - 3 CATEGORIES ONLY -->
         <h3 class="details-header">Presentation Categories</h3>
         <div class="category-grid">
             <div class="category-box animate">Oral Research</div>
@@ -1477,14 +1515,14 @@
         <h2 class="section-title">Organizers</h2>
         <div class="organizers-grid">
             <div class="organizer-card animate">
-                <img src="images/organizer1.png" alt="Allied Health Practitioners Negeri Terengganu Logo">
-                <h3>Allied Health Practitioners Negeri Terengganu</h3>
-                <p>The main organizing body representing allied health professionals in Terengganu, Malaysia.</p>
-            </div>
-            <div class="organizer-card animate">
                 <img src="images/organizer2.png" alt="Ministry of Health Malaysia Logo">
-                <h3>Ministry of Health Malaysia</h3>
+                <h3>Jabatan Kesihatan Negeri Terengganu</h3>
                 <p>Collaborating with the Ministry of Health to promote excellence in allied health practice and research.</p>
+            </div>
+           <div class="organizer-card animate">
+                <img src="images/organizer1.png" alt="Allied Health Practitioners Negeri Terengganu Logo">
+                <h3>Persatuan Anggota Sains Kesihatan Bersekutu Negeri Terengganu</h3>
+                <p>The main organizing body representing Allied Health Professionals in Terengganu, Malaysia.</p>
             </div>
         </div>
     </section>
@@ -1511,7 +1549,7 @@
                         <h3>Abstract & Technical Support</h3>
                         <p>For abstract submission and technical questions</p>
                     </div>
-                    <a href="https://wa.me/60129876543?text=Hello%20AHP%20Conference%20Team,%20I%20have%20a%20question%20about%20abstract%20submission" 
+                    <a href="https://wa.link/98umws" 
                        target="_blank" 
                        class="whatsapp-btn">
                         <i class="fab fa-whatsapp"></i> +60 12-987 6543
