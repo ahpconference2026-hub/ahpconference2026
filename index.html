@@ -61,6 +61,7 @@
             gap: 40px;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 0 20px;
         }
         
         .nav-container a {
@@ -129,6 +130,7 @@
             flex-wrap: nowrap;
             max-width: 900px;
             margin: 0 auto 30px auto;
+            padding: 0 15px;
         }
         
         .countdown-item {
@@ -290,6 +292,7 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            white-space: nowrap;
         }
         
         .floating-buttons a:hover {
@@ -376,6 +379,8 @@
             max-width: 1000px;
             z-index: 2;
             position: relative;
+            padding: 0 20px;
+            width: 100%;
         }
         
         .hero-title {
@@ -422,6 +427,7 @@
             margin-right: auto;
             line-height: 1.4;
             opacity: 0.95;
+            padding: 0 15px;
         }
         
         .hero-date {
@@ -432,6 +438,8 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            flex-wrap: wrap;
+            padding: 0 15px;
         }
         
         .hero-date i {
@@ -444,6 +452,7 @@
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 50px;
+            padding: 0 15px;
         }
         
         .hero-btn {
@@ -458,6 +467,7 @@
             gap: 10px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            white-space: nowrap;
         }
         
         .btn-primary {
@@ -492,6 +502,7 @@
             max-width: 1200px;
             margin: auto;
             position: relative;
+            box-sizing: border-box;
         }
         
         .section-title {
@@ -502,6 +513,7 @@
             position: relative;
             font-weight: 800;
             text-transform: uppercase;
+            padding: 0 15px;
         }
         
         .section-title::after {
@@ -522,11 +534,15 @@
             justify-content: flex-start;
             gap: 50px;
             overflow: hidden;
+            padding: 0 20px;
         }
         
         .welcome-image {
             flex: 0 0 auto;
             position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
         
         .welcome-image::before {
@@ -556,6 +572,8 @@
         .welcome-text {
             flex: 1 1 auto;
             max-width: 650px;
+            width: 100%;
+            padding: 0 10px;
         }
         
         .welcome-text h2 {
@@ -582,6 +600,7 @@
         #details {
             background: var(--light-bg);
             text-align: center;
+            padding: 100px 20px;
         }
         
         .conference-date {
@@ -589,6 +608,7 @@
             font-weight: 800;
             color: var(--primary-color);
             margin-bottom: 15px;
+            padding: 0 15px;
         }
         
         .conference-venue {
@@ -596,6 +616,7 @@
             color: var(--secondary-color);
             margin-bottom: 50px;
             font-weight: 600;
+            padding: 0 15px;
         }
         
         .details-header {
@@ -604,6 +625,7 @@
             color: var(--primary-color);
             margin: 50px 0 35px 0;
             text-transform: uppercase;
+            padding: 0 15px;
         }
         
         /* CATEGORY GRID - 3 CATEGORIES ONLY */
@@ -613,6 +635,7 @@
             gap: 25px;
             max-width: 900px;
             margin: 0 auto 50px auto;
+            padding: 0 15px;
         }
         
         .category-box {
@@ -647,6 +670,7 @@
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            padding: 0 15px;
         }
         
         .fee-item {
@@ -659,6 +683,8 @@
             justify-content: space-between;
             align-items: center;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            flex-wrap: wrap;
+            gap: 15px;
         }
         
         .fee-item:hover {
@@ -681,6 +707,7 @@
             position: relative;
             max-width: 900px;
             margin: 0 auto 80px auto;
+            padding: 0 15px;
         }
         
         .timeline::before {
@@ -799,6 +826,7 @@
             max-width: 1100px;
             margin: 0 auto 80px auto;
             text-align: center;
+            padding: 0 15px;
         }
         
         .speaker-box {
@@ -846,6 +874,7 @@
             color: var(--primary-color);
             margin: 0 0 8px 0;
             font-weight: 700;
+            line-height: 1.3;
         }
         
         .speaker-title {
@@ -864,6 +893,7 @@
         .programs-section {
             max-width: 900px;
             margin: 0 auto 60px auto;
+            padding: 0 15px;
         }
         
         .program-card {
@@ -907,6 +937,7 @@
         
         .program-content {
             flex: 1;
+            min-width: 0; /* Prevents overflow */
         }
         
         .program-content h4 {
@@ -914,6 +945,7 @@
             margin: 0 0 12px 0;
             font-size: 22px;
             font-weight: 700;
+            word-wrap: break-word;
         }
         
         .program-content p {
@@ -921,6 +953,7 @@
             line-height: 1.6;
             margin-bottom: 20px;
             font-size: 16px;
+            word-wrap: break-word;
         }
         
         .program-download-btn {
@@ -937,6 +970,8 @@
             border: none;
             cursor: pointer;
             font-size: 16px;
+            white-space: nowrap;
+            max-width: 100%;
         }
         
         .program-download-btn:hover {
@@ -963,7 +998,8 @@
             .program-card {
                 flex-direction: column;
                 text-align: center;
-                padding: 25px;
+                padding: 25px 20px;
+                gap: 20px;
             }
             
             .program-icon {
@@ -973,6 +1009,8 @@
             .program-download-btn {
                 width: 100%;
                 justify-content: center;
+                padding: 14px 20px;
+                font-size: 15px;
             }
         }
         
@@ -987,6 +1025,7 @@
             gap: 35px;
             max-width: 1100px;
             margin: 0 auto;
+            padding: 0 15px;
         }
         
         .objective-card {
@@ -1038,6 +1077,7 @@
             gap: 50px;
             align-items: center;
             justify-content: center;
+            padding: 0 15px;
         }
         
         .venue-image {
@@ -1062,6 +1102,7 @@
         .venue-details {
             flex: 1;
             min-width: 300px;
+            padding: 0 10px;
         }
         
         .venue-details h3 {
@@ -1084,6 +1125,7 @@
             color: var(--accent-color);
             margin-top: 5px;
             font-size: 20px;
+            flex-shrink: 0;
         }
         
         .map-link {
@@ -1102,6 +1144,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-size: 16px;
+            white-space: nowrap;
         }
         
         .map-link:hover {
@@ -1129,6 +1172,7 @@
             gap: 40px;
             max-width: 900px;
             margin: 0 auto;
+            padding: 0 15px;
         }
         
         .organizer-card {
@@ -1177,6 +1221,7 @@
             gap: 40px;
             max-width: 1200px;
             margin: 0 auto 60px auto;
+            padding: 0 15px;
         }
         
         .major-sponsors {
@@ -1260,6 +1305,7 @@
             max-width: 700px;
             margin: 0 auto;
             text-align: center;
+            padding: 0 15px;
         }
         
         .whatsapp-title {
@@ -1284,6 +1330,8 @@
             align-items: center;
             justify-content: space-between;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            flex-wrap: wrap;
+            gap: 20px;
         }
         
         .whatsapp-contact:hover {
@@ -1293,6 +1341,8 @@
         
         .contact-info-whatsapp {
             text-align: left;
+            flex: 1;
+            min-width: 250px;
         }
         
         .contact-info-whatsapp h3 {
@@ -1322,6 +1372,7 @@
             text-decoration: none;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             font-size: 16px;
+            white-space: nowrap;
         }
         
         .whatsapp-btn:hover {
@@ -1350,6 +1401,7 @@
             gap: 50px;
             text-align: left;
             margin-bottom: 40px;
+            padding: 0 15px;
         }
         
         .footer-column h3 {
@@ -1395,6 +1447,7 @@
             padding-top: 30px;
             opacity: 0.8;
             font-size: 15px;
+            padding: 0 15px;
         }
         
         /* RESPONSIVE */
@@ -1409,6 +1462,10 @@
             
             .conference-tag {
                 font-size: 22px;
+            }
+            
+            .conference-date {
+                font-size: 50px;
             }
         }
         
@@ -1550,21 +1607,43 @@
         }
         
         @media(max-width: 768px) {
+            .navbar {
+                padding: 15px 0;
+            }
+            
+            .nav-container {
+                gap: 20px;
+                padding: 0 15px;
+                justify-content: center;
+            }
+            
+            .nav-container a {
+                font-size: 14px;
+            }
+            
             .category-grid {
                 grid-template-columns: 1fr;
                 max-width: 400px;
+                gap: 15px;
+            }
+            
+            .category-box {
+                padding: 25px 15px;
+                font-size: 16px;
             }
             
             .sponsor-logo.major {
                 min-width: 160px;
                 max-width: 180px;
                 min-height: 160px;
+                padding: 20px;
             }
             
             .sponsor-logo.supporting {
                 min-width: 80px;
                 max-width: 90px;
                 min-height: 80px;
+                padding: 15px;
             }
             
             .sponsor-logo.major img {
@@ -1582,33 +1661,113 @@
             
             .countdown-item {
                 min-width: calc(50% - 20px);
+                padding: 20px 15px;
+            }
+            
+            .countdown-number {
+                font-size: 32px;
             }
             
             .floating-buttons {
                 bottom: 20px;
                 top: auto;
-                right: 50%;
-                transform: translateX(50%);
+                right: 20px;
+                left: 20px;
+                transform: none;
                 flex-direction: row;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .floating-buttons a {
+                padding: 15px 20px;
+                font-size: 14px;
+                flex: 1;
+                min-width: 140px;
+                max-width: 200px;
+            }
+            
+            .hero-title {
+                font-size: 36px;
+                line-height: 1.1;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+                line-height: 1.3;
+            }
+            
+            .conference-tag {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                width: 100%;
+                max-width: 350px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 16px 25px;
+                font-size: 16px;
+            }
+            
+            .program-download-btn {
+                font-size: 15px;
+                padding: 12px 20px;
+            }
+            
+            .map-link {
+                padding: 14px 25px;
+                font-size: 15px;
+            }
+            
+            .whatsapp-btn {
+                padding: 14px 25px;
+                font-size: 15px;
             }
         }
         
         @media(max-width: 600px) {
             .navbar {
-                padding: 15px 0;
+                padding: 12px 0;
             }
             
             .nav-container {
-                gap: 20px;
+                gap: 15px;
+                font-size: 13px;
+            }
+            
+            .nav-container a {
+                font-size: 13px;
             }
             
             .conference-date {
                 font-size: 36px;
             }
             
+            .conference-venue {
+                font-size: 18px;
+            }
+            
+            .floating-buttons {
+                bottom: 15px;
+                right: 15px;
+                left: 15px;
+                gap: 10px;
+            }
+            
             .floating-buttons a {
-                padding: 12px 20px;
+                padding: 12px 15px;
                 font-size: 13px;
+                min-width: 130px;
             }
             
             .timeline::before {
@@ -1632,15 +1791,15 @@
             }
             
             .sponsor-logo.major {
-                min-width: calc(50% - 20px);
-                max-width: calc(50% - 20px);
+                min-width: calc(50% - 15px);
+                max-width: calc(50% - 15px);
                 min-height: 140px;
                 padding: 20px;
             }
             
             .sponsor-logo.supporting {
-                min-width: calc(33.33% - 15px);
-                max-width: calc(33.33% - 15px);
+                min-width: calc(33.33% - 10px);
+                max-width: calc(33.33% - 10px);
                 min-height: 90px;
                 padding: 15px;
             }
@@ -1653,26 +1812,32 @@
             
             .hero-title {
                 font-size: 32px;
+                padding: 0 10px;
             }
             
             .hero-subtitle {
-                font-size: 18px;
+                font-size: 17px;
+                padding: 0 10px;
             }
             
             .conference-tag {
-                font-size: 18px;
-                padding: 10px 20px;
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+            
+            .hero-date {
+                font-size: 20px;
+                padding: 0 10px;
             }
             
             .hero-buttons {
-                flex-direction: column;
-                align-items: center;
+                max-width: 320px;
+                gap: 12px;
             }
             
             .hero-btn {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
+                padding: 14px 20px;
+                font-size: 15px;
             }
             
             .countdown {
@@ -1685,11 +1850,11 @@
             }
             
             .countdown-number {
-                font-size: 32px;
+                font-size: 28px;
             }
             
             .countdown-label {
-                font-size: 14px;
+                font-size: 12px;
             }
             
             .countdown-title {
@@ -1704,6 +1869,45 @@
             .conference-date-badge::after {
                 font-size: 10px;
             }
+            
+            .section-title {
+                font-size: 30px;
+                padding: 0 10px;
+            }
+            
+            .details-header {
+                font-size: 24px;
+                padding: 0 10px;
+            }
+            
+            .speaker-box {
+                padding: 25px 20px;
+            }
+            
+            .speaker-box img {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .speaker-box h4 {
+                font-size: 20px;
+            }
+            
+            .speaker-title {
+                font-size: 14px;
+            }
+            
+            .program-card h4 {
+                font-size: 20px;
+            }
+            
+            .whatsapp-contact {
+                padding: 25px 20px;
+            }
+            
+            .contact-info-whatsapp h3 {
+                font-size: 18px;
+            }
         }
         
         @media(max-width: 400px) {
@@ -1717,32 +1921,123 @@
             }
             
             .countdown-number {
-                font-size: 28px;
+                font-size: 24px;
             }
             
             .nav-container {
-                gap: 15px;
-                font-size: 14px;
+                gap: 12px;
+                font-size: 12px;
+            }
+            
+            .nav-container a {
+                font-size: 12px;
             }
             
             .category-box {
-                padding: 25px 15px;
-                font-size: 16px;
+                padding: 20px 12px;
+                font-size: 15px;
             }
             
             .calendar-link {
-                font-size: 12px;
+                font-size: 11px;
                 padding: 4px 8px;
             }
             
             .sponsor-logo.major {
-                min-width: calc(50% - 15px);
-                max-width: calc(50% - 15px);
+                min-width: calc(50% - 10px);
+                max-width: calc(50% - 10px);
+                padding: 15px;
             }
             
             .sponsor-logo.supporting {
-                min-width: calc(33.33% - 10px);
-                max-width: calc(33.33% - 10px);
+                min-width: calc(33.33% - 8px);
+                max-width: calc(33.33% - 8px);
+                padding: 12px;
+            }
+            
+            .floating-buttons {
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+            }
+            
+            .floating-buttons a {
+                padding: 10px 12px;
+                font-size: 12px;
+                min-width: 120px;
+            }
+            
+            .hero-title {
+                font-size: 28px;
+            }
+            
+            .hero-subtitle {
+                font-size: 16px;
+            }
+            
+            .conference-tag {
+                font-size: 15px;
+                padding: 6px 14px;
+            }
+            
+            .hero-date {
+                font-size: 18px;
+            }
+            
+            .hero-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            
+            .program-download-btn {
+                font-size: 14px;
+                padding: 10px 18px;
+            }
+            
+            .map-link, .whatsapp-btn {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+        
+        @media(max-width: 350px) {
+            .nav-container {
+                gap: 10px;
+            }
+            
+            .nav-container a {
+                font-size: 11px;
+            }
+            
+            .hero-title {
+                font-size: 26px;
+            }
+            
+            .hero-subtitle {
+                font-size: 15px;
+            }
+            
+            .conference-date {
+                font-size: 32px;
+            }
+            
+            .countdown-item {
+                min-width: calc(50% - 5px);
+                padding: 12px 5px;
+            }
+            
+            .countdown-number {
+                font-size: 22px;
+            }
+            
+            .floating-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .floating-buttons a {
+                width: 100%;
+                max-width: 250px;
             }
         }
     </style>
