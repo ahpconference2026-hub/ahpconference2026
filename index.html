@@ -1257,7 +1257,7 @@
         }
         
         .whatsapp-container {
-            max-width: 700px;
+            max-width: 900px;
             margin: 0 auto;
             text-align: center;
         }
@@ -1280,9 +1280,6 @@
             border-radius: 12px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
@@ -1291,21 +1288,31 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
         
-        .contact-info-whatsapp {
-            text-align: left;
+        /* UPDATED CONTACT SECTION STYLES - Second Option */
+        .contact-header {
+            text-align: center;
+            margin-bottom: 25px;
         }
         
-        .contact-info-whatsapp h3 {
+        .contact-header h3 {
             color: var(--primary-color);
             margin-bottom: 8px;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 700;
         }
         
-        .contact-info-whatsapp p {
+        .contact-header p {
             color: #666;
             margin: 0;
             font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .whatsapp-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
         }
         
         .whatsapp-btn {
@@ -1318,10 +1325,13 @@
             cursor: pointer;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             text-decoration: none;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             font-size: 16px;
+            width: 100%;
+            max-width: 250px;
         }
         
         .whatsapp-btn:hover {
@@ -1332,6 +1342,52 @@
         
         .whatsapp-btn i {
             font-size: 22px;
+        }
+        
+        /* Second option layout - horizontal on desktop, vertical on mobile */
+        @media (min-width: 769px) {
+            .whatsapp-contact {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                gap: 40px;
+                padding: 40px;
+            }
+            
+            .contact-header {
+                flex: 1;
+                text-align: left;
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+            
+            .whatsapp-buttons {
+                flex: 1;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 15px;
+            }
+            
+            .whatsapp-btn {
+                width: 100%;
+                max-width: 100%;
+                justify-content: flex-start;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-contact {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-header {
+                margin-bottom: 25px;
+            }
+            
+            .whatsapp-buttons {
+                width: 100%;
+            }
         }
         
         /* FOOTER */
@@ -1529,7 +1585,7 @@
                 gap: 20px;
             }
             
-            .contact-info-whatsapp {
+            .contact-header {
                 text-align: center;
             }
             
@@ -2016,15 +2072,17 @@
         <h3 class="details-header" style="margin-top: 70px;" data-aos="fade-up">Join PASKBT Membership</h3>
         <div class="whatsapp-container" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="200">
             <div class="whatsapp-contact">
-                <div class="contact-info-whatsapp">
+                <div class="contact-header">
                     <h3>Become a Persatuan Ahli Sains Kesihatan Bersekutu(PASKBT) Member</h3>
                     <p>Click below to inquire about PASKBT membership benefits and application process</p>
                 </div>
-                <a href="https://wa.link/atvkrs" 
-                   target="_blank" 
-                   class="whatsapp-btn">
-                    <i class="fab fa-whatsapp"></i> Join PASKBT
-                </a>
+                <div class="whatsapp-buttons">
+                    <a href="https://wa.link/atvkrs" 
+                       target="_blank" 
+                       class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Join PASKBT
+                    </a>
+                </div>
             </div>
             <p style="margin-top: 15px; color: #666; font-size: 14px; text-align: center;">
                 <i class="fas fa-info-circle"></i> PASKBT members enjoy FREE registration for this conference
@@ -2253,38 +2311,43 @@
             <div class="whatsapp-title" data-aos="fade-up" data-aos-delay="200">Contact via WhatsApp</div>
             <div class="whatsapp-contacts">
                 <div class="whatsapp-contact" data-aos="fade-up" data-aos-delay="300">
-                    <div class="contact-info-whatsapp">
+                    <div class="contact-header">
                         <h3>Registration & General Inquiries</h3>
                         <p>For registration questions and general conference information</p>
                     </div>
-                    <a href="https://wa.link/jkvq7t" 
-                       target="_blank" 
-                       class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> Pn.Malihah
-                    </a>
-                    
-                    <a href="https://wa.link/zu3b9p" 
-                       target="_blank" 
-                       class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> Pn.Hizwani
-                    </a>
-                    
-                    <a href="https://wa.link/dottya" 
-                       target="_blank" 
-                       class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> En.Hasni
-                    </a>
+                    <div class="whatsapp-buttons">
+                        <a href="https://wa.link/jkvq7t" 
+                           target="_blank" 
+                           class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Pn.Malihah
+                        </a>
+                        
+                        <a href="https://wa.link/zu3b9p" 
+                           target="_blank" 
+                           class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Pn.Hizwani
+                        </a>
+                        
+                        <a href="https://wa.link/dottya" 
+                           target="_blank" 
+                           class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> En.Hasni
+                        </a>
+                    </div>
                 </div>
+                
                 <div class="whatsapp-contact" data-aos="fade-up" data-aos-delay="500">
-                    <div class="contact-info-whatsapp">
+                    <div class="contact-header">
                         <h3>Abstract & Technical Support</h3>
                         <p>For abstract submission and technical questions</p>
                     </div>
-                    <a href="https://wa.link/po8d6x" 
-                       target="_blank" 
-                       class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> click me
-                    </a>
+                    <div class="whatsapp-buttons">
+                        <a href="https://wa.link/po8d6x" 
+                           target="_blank" 
+                           class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> click me
+                        </a>
+                    </div>
                 </div>
             </div>
             <p style="margin-top: 30px; color: #666; font-size: 16px;">
