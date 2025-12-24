@@ -452,7 +452,7 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
         
-        /* HERO - WITH PARALLAX AND ANIMATED GRADIENT */
+        /* HERO - WITH PARALLAX AND ANIMATED GRADIENT - FIXED FOR DESKTOP */
         .hero {
             min-height: 100vh;
             position: relative;
@@ -2162,11 +2162,21 @@
                 height: 2px;
                 margin: 3px 0;
             }
-
-        /* FIX FOR DESKTOP NAVBAR OVERLAP */
+        }
+        
+        /* FIX FOR DESKTOP NAVBAR OVERLAP - CRITICAL FIX */
+        /* This adds proper spacing for the fixed navbar on desktop */
         @media(min-width: 769px) {
             .hero {
-                padding-top: 120px;
+                padding-top: 120px !important; /* Force this to override any other styles */
+                min-height: calc(100vh - 80px); /* Adjust min-height to account for navbar */
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .hero-content {
+                padding-top: 0;
+                margin-top: 0;
             }
         }
     </style>
