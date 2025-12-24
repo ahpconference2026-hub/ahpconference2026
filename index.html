@@ -26,6 +26,10 @@
             --calendar-blue: #1a73e8;
         }
         
+        * {
+            box-sizing: border-box;
+        }
+        
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
@@ -61,6 +65,7 @@
             gap: 40px;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 0 20px;
         }
         
         .nav-container a {
@@ -374,8 +379,10 @@
         
         .hero-content {
             max-width: 1000px;
+            width: 100%;
             z-index: 2;
             position: relative;
+            padding: 0 20px;
         }
         
         .hero-title {
@@ -386,6 +393,8 @@
             text-transform: uppercase;
             letter-spacing: -0.5px;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .hero-title span {
@@ -406,6 +415,8 @@
             text-transform: uppercase;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             animation: pulse 2s infinite;
+            max-width: 90%;
+            word-wrap: break-word;
         }
         
         @keyframes pulse {
@@ -422,6 +433,7 @@
             margin-right: auto;
             line-height: 1.4;
             opacity: 0.95;
+            word-wrap: break-word;
         }
         
         .hero-date {
@@ -432,6 +444,7 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            flex-wrap: wrap;
         }
         
         .hero-date i {
@@ -444,6 +457,7 @@
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 50px;
+            width: 100%;
         }
         
         .hero-btn {
@@ -455,9 +469,12 @@
             transition: all 0.3s;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            width: auto;
+            min-width: 200px;
         }
         
         .btn-primary {
@@ -492,6 +509,7 @@
             max-width: 1200px;
             margin: auto;
             position: relative;
+            width: 100%;
         }
         
         .section-title {
@@ -502,6 +520,8 @@
             position: relative;
             font-weight: 800;
             text-transform: uppercase;
+            word-wrap: break-word;
+            padding: 0 20px;
         }
         
         .section-title::after {
@@ -589,6 +609,8 @@
             font-weight: 800;
             color: var(--primary-color);
             margin-bottom: 15px;
+            word-wrap: break-word;
+            padding: 0 20px;
         }
         
         .conference-venue {
@@ -596,6 +618,8 @@
             color: var(--secondary-color);
             margin-bottom: 50px;
             font-weight: 600;
+            word-wrap: break-word;
+            padding: 0 20px;
         }
         
         .details-header {
@@ -604,6 +628,8 @@
             color: var(--primary-color);
             margin: 50px 0 35px 0;
             text-transform: uppercase;
+            word-wrap: break-word;
+            padding: 0 20px;
         }
         
         /* CATEGORY GRID - 3 CATEGORIES ONLY */
@@ -613,6 +639,7 @@
             gap: 25px;
             max-width: 900px;
             margin: 0 auto 50px auto;
+            padding: 0 20px;
         }
         
         .category-box {
@@ -628,6 +655,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            word-wrap: break-word;
         }
         
         .category-box:hover {
@@ -647,6 +675,7 @@
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            padding: 0 20px;
         }
         
         .fee-item {
@@ -659,6 +688,7 @@
             justify-content: space-between;
             align-items: center;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 100%;
         }
         
         .fee-item:hover {
@@ -681,6 +711,7 @@
             position: relative;
             max-width: 900px;
             margin: 0 auto 80px auto;
+            padding: 0 20px;
         }
         
         .timeline::before {
@@ -799,6 +830,7 @@
             max-width: 1100px;
             margin: 0 auto 80px auto;
             text-align: center;
+            padding: 0 20px;
         }
         
         .speaker-box {
@@ -864,6 +896,7 @@
         .programs-section {
             max-width: 900px;
             margin: 0 auto 60px auto;
+            padding: 0 20px;
         }
         
         .program-card {
@@ -877,6 +910,7 @@
             gap: 25px;
             border-left: 5px solid var(--accent-color);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 100%;
         }
         
         .program-card:hover {
@@ -926,6 +960,7 @@
         .program-download-btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
             background: var(--accent-color);
             color: var(--dark-blue);
@@ -937,6 +972,8 @@
             border: none;
             cursor: pointer;
             font-size: 16px;
+            width: auto;
+            min-width: 200px;
         }
         
         .program-download-btn:hover {
@@ -959,23 +996,6 @@
             font-size: 18px;
         }
         
-        @media (max-width: 768px) {
-            .program-card {
-                flex-direction: column;
-                text-align: center;
-                padding: 25px;
-            }
-            
-            .program-icon {
-                margin: 0 auto 20px auto;
-            }
-            
-            .program-download-btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
         /* OBJECTIVES SECTION */
         #objectives {
             padding-bottom: 50px;
@@ -987,6 +1007,7 @@
             gap: 35px;
             max-width: 1100px;
             margin: 0 auto;
+            padding: 0 20px;
         }
         
         .objective-card {
@@ -1089,6 +1110,7 @@
         .map-link {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             background: var(--primary-color);
             color: white;
@@ -1102,6 +1124,8 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-size: 16px;
+            width: auto;
+            min-width: 200px;
         }
         
         .map-link:hover {
@@ -1129,6 +1153,7 @@
             gap: 40px;
             max-width: 900px;
             margin: 0 auto;
+            padding: 0 20px;
         }
         
         .organizer-card {
@@ -1177,6 +1202,7 @@
             gap: 40px;
             max-width: 1200px;
             margin: 0 auto 60px auto;
+            padding: 0 20px;
         }
         
         .major-sponsors {
@@ -1260,6 +1286,7 @@
             max-width: 900px;
             margin: 0 auto;
             text-align: center;
+            padding: 0 20px;
         }
         
         .whatsapp-title {
@@ -1281,6 +1308,7 @@
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 100%;
         }
         
         .whatsapp-contact:hover {
@@ -1313,6 +1341,7 @@
             flex-direction: column;
             gap: 15px;
             align-items: center;
+            width: 100%;
         }
         
         .whatsapp-btn {
@@ -1406,6 +1435,7 @@
             gap: 50px;
             text-align: left;
             margin-bottom: 40px;
+            padding: 0 20px;
         }
         
         .footer-column h3 {
@@ -1486,27 +1516,33 @@
             
             .hero-title {
                 font-size: 42px;
+                padding: 0 15px;
             }
             
             .hero-subtitle {
                 font-size: 20px;
+                padding: 0 15px;
             }
             
             .conference-date {
                 font-size: 48px;
+                padding: 0 15px;
             }
             
             .conference-venue {
                 font-size: 20px;
+                padding: 0 15px;
             }
             
             .details-header {
                 font-size: 28px;
+                padding: 0 15px;
             }
             
             .category-grid {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 20px;
+                padding: 0 15px;
             }
             
             .category-box {
@@ -1516,6 +1552,7 @@
             
             .registration-fees {
                 font-size: 18px;
+                padding: 0 15px;
             }
             
             .speaker-box img {
@@ -1525,10 +1562,11 @@
             
             .section-title {
                 font-size: 36px;
+                padding: 0 15px;
             }
             
             .section {
-                padding: 80px 20px;
+                padding: 80px 15px;
             }
             
             .floating-buttons a {
@@ -1548,6 +1586,7 @@
             /* Sponsors responsive */
             .sponsors-grid {
                 gap: 25px;
+                padding: 0 15px;
             }
             
             .sponsor-logo.major {
@@ -1606,9 +1645,42 @@
         }
         
         @media(max-width: 768px) {
+            .hero-content {
+                padding: 0 15px;
+            }
+            
+            .hero-title {
+                font-size: 38px;
+                line-height: 1.1;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+                line-height: 1.3;
+            }
+            
+            .conference-tag {
+                font-size: 20px;
+                padding: 10px 20px;
+            }
+            
+            .hero-btn {
+                width: 100%;
+                max-width: 300px;
+                min-width: unset;
+                padding: 16px 20px;
+                font-size: 16px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
             .category-grid {
                 grid-template-columns: 1fr;
                 max-width: 400px;
+                padding: 0 15px;
             }
             
             .sponsor-logo.major {
@@ -1646,6 +1718,33 @@
                 right: 50%;
                 transform: translateX(50%);
                 flex-direction: row;
+                width: 90%;
+                max-width: 400px;
+            }
+            
+            .floating-buttons a {
+                flex: 1;
+                min-width: 0;
+                padding: 15px;
+                font-size: 13px;
+            }
+            
+            .program-card {
+                padding: 25px 20px;
+            }
+            
+            .program-download-btn {
+                width: 100%;
+                max-width: 300px;
+                min-width: unset;
+            }
+            
+            .map-link {
+                width: 100%;
+                max-width: 300px;
+                min-width: unset;
+                margin-left: 0;
+                margin-right: 0;
             }
         }
         
@@ -1656,15 +1755,21 @@
             
             .nav-container {
                 gap: 20px;
+                padding: 0 10px;
+            }
+            
+            .nav-container a {
+                font-size: 14px;
             }
             
             .conference-date {
                 font-size: 36px;
+                padding: 0 10px;
             }
             
             .floating-buttons a {
-                padding: 12px 20px;
-                font-size: 13px;
+                padding: 12px 15px;
+                font-size: 12px;
             }
             
             .timeline::before {
@@ -1681,10 +1786,12 @@
             
             .organizers-grid {
                 grid-template-columns: 1fr;
+                padding: 0 15px;
             }
             
             .sponsors-grid {
                 gap: 15px;
+                padding: 0 15px;
             }
             
             .sponsor-logo.major {
@@ -1712,7 +1819,7 @@
             }
             
             .hero-subtitle {
-                font-size: 18px;
+                font-size: 17px;
             }
             
             .conference-tag {
@@ -1720,15 +1827,8 @@
                 padding: 10px 20px;
             }
             
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
             .hero-btn {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
+                max-width: 100%;
             }
             
             .countdown {
@@ -1760,9 +1860,82 @@
             .conference-date-badge::after {
                 font-size: 10px;
             }
+            
+            .section {
+                padding: 60px 15px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+                padding: 0 10px;
+            }
+            
+            .programs-section {
+                padding: 0 10px;
+            }
+            
+            .program-card {
+                padding: 20px 15px;
+            }
+            
+            .program-download-btn {
+                max-width: 100%;
+            }
+            
+            .registration-fees {
+                padding: 0 10px;
+            }
+            
+            .fee-item {
+                padding: 20px 15px;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .fee-item div:first-child {
+                font-size: 16px;
+            }
+            
+            .fee-item span {
+                font-size: 22px;
+            }
+            
+            .timeline-content {
+                padding: 20px 15px;
+            }
+            
+            .speakers-grid {
+                padding: 0 15px;
+            }
+            
+            .objectives-container {
+                padding: 0 15px;
+            }
+            
+            .organizers-grid {
+                padding: 0 15px;
+            }
         }
         
         @media(max-width: 400px) {
+            .hero-title {
+                font-size: 28px;
+            }
+            
+            .hero-subtitle {
+                font-size: 16px;
+            }
+            
+            .conference-tag {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+            
+            .hero-date {
+                font-size: 20px;
+            }
+            
             .countdown {
                 gap: 10px;
             }
@@ -1778,7 +1951,10 @@
             
             .nav-container {
                 gap: 15px;
-                font-size: 14px;
+            }
+            
+            .nav-container a {
+                font-size: 13px;
             }
             
             .category-box {
@@ -1799,6 +1975,20 @@
             .sponsor-logo.supporting {
                 min-width: calc(33.33% - 10px);
                 max-width: calc(33.33% - 10px);
+            }
+            
+            .floating-buttons {
+                width: 95%;
+                max-width: 350px;
+            }
+            
+            .floating-buttons a {
+                font-size: 11px;
+                padding: 10px 12px;
+            }
+            
+            .countdown-container {
+                padding: 50px 15px;
             }
         }
     </style>
@@ -2184,21 +2374,23 @@
                 <p><i class="fas fa-wifi"></i> Facilities: Free Wi-Fi, Conference Halls, Breakout Rooms, Exhibition Area, Prayer Rooms, Dining Hall</p>
                 <p><i class="fas fa-car"></i> Parking: Ample parking available for participants</p>
                 
-                <a href="https://maps.app.goo.gl/VSTxBjdw39bqE3WSA" 
-                   target="_blank" 
-                   class="map-link"
-                   title="Click to open in Google Maps">
-                    <i class="fas fa-map-marked-alt"></i> View on Google Maps
-                </a>
-                
-                <!-- ADDED BOOKING BUTTON -->
-                <a href="https://wa.link/m5wpau" 
-                   target="_blank" 
-                   class="map-link"
-                   style="margin-left: 15px; background: var(--whatsapp-green);"
-                   title="Click to book accommodation via WhatsApp">
-                    <i class="fab fa-whatsapp"></i> Click for Bookings
-                </a>
+                <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
+                    <a href="https://maps.app.goo.gl/VSTxBjdw39bqE3WSA" 
+                       target="_blank" 
+                       class="map-link"
+                       title="Click to open in Google Maps">
+                        <i class="fas fa-map-marked-alt"></i> View on Google Maps
+                    </a>
+                    
+                    <!-- ADDED BOOKING BUTTON -->
+                    <a href="https://wa.link/m5wpau" 
+                       target="_blank" 
+                       class="map-link"
+                       style="background: var(--whatsapp-green);"
+                       title="Click to book accommodation via WhatsApp">
+                        <i class="fab fa-whatsapp"></i> Click for Bookings
+                    </a>
+                </div>
                 
                 <div class="map-hint">Click the icons above to open location in Google Maps or book accommodation</div>
             </div>
