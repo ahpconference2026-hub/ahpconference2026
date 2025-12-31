@@ -687,33 +687,36 @@
         /* =========================================== */
         #welcome {
             text-align: center;
-            padding: 120px 20px;
+            padding: 100px 20px;
             position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
         .welcome-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 50px;
+            gap: 30px; /* Reduced gap for tighter layout */
             max-width: 900px;
             margin: 0 auto;
         }
         
-        /* Circular Profile Image Container */
+        /* Circular Profile Image Container - 2X BIGGER */
         .profile-image-container {
             position: relative;
-            width: 220px;
-            height: 220px;
+            width: 400px; /* 2x bigger - was 220px */
+            height: 400px; /* 2x bigger - was 220px */
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 8px;
+            padding: 12px; /* Slightly thicker border */
             box-shadow: 0 20px 40px rgba(17, 32, 69, 0.25);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 10px; /* Minimal gap below image */
         }
         
         .profile-image-container:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
             box-shadow: 0 25px 50px rgba(17, 32, 69, 0.3);
         }
         
@@ -722,23 +725,34 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid white;
+            border: 6px solid white; /* Thicker border for larger image */
         }
         
-        /* Welcome Title */
+        /* Welcome Title - CLOSE TO IMAGE */
         .welcome-title {
-            font-size: 36px;
+            font-size: 42px;
             color: var(--primary-color);
-            margin-bottom: 10px;
+            margin: 10px 0 0 0; /* Minimal margin above, no margin below */
             font-weight: 800;
             text-align: center;
+            line-height: 1.2;
         }
         
-        .welcome-subtitle {
+        /* President Name - CLOSE TO TITLE */
+        .president-name {
             color: var(--secondary-color);
-            font-size: 22px;
-            margin-bottom: 40px;
+            font-size: 24px;
+            margin: 5px 0 5px 0; /* Very minimal margins */
             font-weight: 600;
+            text-align: center;
+            line-height: 1.3;
+        }
+        
+        .president-title {
+            color: #666;
+            font-size: 20px;
+            margin: 0 0 30px 0; /* Minimal margin below, then speech bubble starts */
+            font-weight: 500;
             text-align: center;
             line-height: 1.4;
         }
@@ -748,22 +762,22 @@
             position: relative;
             background: white;
             border-radius: 20px;
-            padding: 50px 40px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
+            padding: 40px 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
             margin: 0 auto;
             text-align: left;
             border-left: 5px solid var(--accent-color);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
         }
         
         .speech-bubble:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
         
-        /* Speech Bubble Pointer/Tail */
-        .speech-bubble::before {
+        /* Speech Bubble Pointer/Tail - REMOVED since you want it close */
+        /* .speech-bubble::before {
             content: '';
             position: absolute;
             top: -20px;
@@ -774,28 +788,15 @@
             border-left: 20px solid transparent;
             border-right: 20px solid transparent;
             border-bottom: 20px solid white;
-        }
+        } */
         
-        /* Speech Bubble Inner Glow Effect */
-        .speech-bubble::after {
-            content: '';
-            position: absolute;
-            top: -18px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 18px solid transparent;
-            border-right: 18px solid transparent;
-            border-bottom: 18px solid var(--accent-color);
-            z-index: -1;
-        }
-        
-        /* Welcome Message Text */
+        /* Welcome Message Text - JUSTIFIED */
         .welcome-message {
             line-height: 1.7;
-            font-size: 17px;
+            font-size: 18px;
             color: #555;
+            text-align: justify; /* Justified text */
+            text-justify: inter-word; /* Better word spacing for justified text */
         }
         
         .welcome-message p {
@@ -1711,22 +1712,31 @@
             }
             
             /* Welcome section responsive */
-            .welcome-title {
-                font-size: 32px;
+            .profile-image-container {
+                width: 350px;
+                height: 350px;
             }
             
-            .welcome-subtitle {
-                font-size: 20px;
+            .welcome-title {
+                font-size: 38px;
+            }
+            
+            .president-name {
+                font-size: 22px;
+            }
+            
+            .president-title {
+                font-size: 18px;
             }
             
             .speech-bubble {
-                padding: 40px 30px;
+                padding: 35px 40px;
             }
         }
         
         @media(max-width: 900px) {
             #welcome {
-                padding: 100px 20px;
+                padding: 80px 20px;
             }
             
             .floating-buttons {
@@ -1804,24 +1814,34 @@
             
             /* Welcome section responsive */
             .welcome-container {
-                gap: 40px;
+                gap: 20px;
             }
             
             .profile-image-container {
-                width: 200px;
-                height: 200px;
+                width: 300px;
+                height: 300px;
             }
             
             .welcome-title {
-                font-size: 30px;
+                font-size: 34px;
             }
             
-            .welcome-subtitle {
-                font-size: 19px;
+            .president-name {
+                font-size: 20px;
+                margin: 3px 0 3px 0;
+            }
+            
+            .president-title {
+                font-size: 17px;
+                margin: 0 0 25px 0;
             }
             
             .speech-bubble {
-                padding: 35px 25px;
+                padding: 30px 35px;
+            }
+            
+            .welcome-message {
+                font-size: 17px;
             }
             
             /* Sponsors responsive */
@@ -1937,34 +1957,47 @@
             
             /* Welcome section mobile */
             #welcome {
-                padding: 80px 15px;
+                padding: 60px 15px;
             }
             
             .welcome-container {
-                gap: 30px;
+                gap: 15px;
             }
             
             .profile-image-container {
-                width: 180px;
-                height: 180px;
+                width: 250px;
+                height: 250px;
+                padding: 10px;
+            }
+            
+            .profile-image {
+                border: 5px solid white;
             }
             
             .welcome-title {
-                font-size: 28px;
+                font-size: 30px;
+                margin: 5px 0 0 0;
             }
             
-            .welcome-subtitle {
+            .president-name {
                 font-size: 18px;
-                line-height: 1.4;
+                margin: 2px 0 2px 0;
+            }
+            
+            .president-title {
+                font-size: 16px;
+                margin: 0 0 20px 0;
             }
             
             .speech-bubble {
-                padding: 30px 20px;
+                padding: 25px 20px;
                 border-radius: 15px;
+                margin: 0;
             }
             
             .welcome-message {
                 font-size: 16px;
+                text-align: left; /* On mobile, left align is better for readability */
             }
             
             .sponsor-logo.major {
@@ -2051,25 +2084,37 @@
             
             /* Welcome section mobile */
             #welcome {
-                padding: 60px 15px;
+                padding: 50px 15px;
             }
             
             .profile-image-container {
-                width: 160px;
-                height: 160px;
+                width: 220px;
+                height: 220px;
+                padding: 8px;
+            }
+            
+            .profile-image {
+                border: 4px solid white;
             }
             
             .welcome-title {
                 font-size: 26px;
+                margin: 3px 0 0 0;
             }
             
-            .welcome-subtitle {
+            .president-name {
                 font-size: 17px;
+                margin: 1px 0 1px 0;
+            }
+            
+            .president-title {
+                font-size: 15px;
+                margin: 0 0 15px 0;
             }
             
             .speech-bubble {
-                padding: 25px 20px;
-                margin: 0 10px;
+                padding: 20px 18px;
+                border-radius: 12px;
             }
             
             .welcome-message {
@@ -2252,20 +2297,32 @@
             
             /* Welcome section small mobile */
             .profile-image-container {
-                width: 140px;
-                height: 140px;
+                width: 200px;
+                height: 200px;
+                padding: 6px;
+            }
+            
+            .profile-image {
+                border: 3px solid white;
             }
             
             .welcome-title {
                 font-size: 24px;
+                margin: 2px 0 0 0;
             }
             
-            .welcome-subtitle {
+            .president-name {
                 font-size: 16px;
+                margin: 0;
+            }
+            
+            .president-title {
+                font-size: 14px;
+                margin: 0 0 12px 0;
             }
             
             .speech-bubble {
-                padding: 20px 15px;
+                padding: 18px 15px;
             }
             
             .welcome-message {
@@ -2477,19 +2534,23 @@
     <!-- =========================================== -->
     <section id="welcome" class="section">
         <div class="welcome-container" data-aos="fade-up" data-aos-duration="1000">
-            <!-- Circular Profile Image -->
+            <!-- Circular Profile Image - 2X BIGGER -->
             <div class="profile-image-container" data-aos="zoom-in" data-aos-delay="200">
                 <img src="images/president.jpg" alt="President AHP Terengganu" class="profile-image">
             </div>
             
-            <!-- Title and Subtitle -->
+            <!-- Welcome Message - CLOSE TO IMAGE -->
             <div class="welcome-title" data-aos="fade-up" data-aos-delay="300">Welcome Message</div>
-            <div class="welcome-subtitle" data-aos="fade-up" data-aos-delay="400">
-                DR. HARIZA BINTI HUSSIN ,<br>
+            
+            <!-- President Name - CLOSE TO WELCOME MESSAGE -->
+            <div class="president-name" data-aos="fade-up" data-aos-delay="350">
+                DR. HARIZA BINTI HUSSIN
+            </div>
+            <div class="president-title" data-aos="fade-up" data-aos-delay="400">
                 Deputy State Health Director (Medicine), Terengganu State Health Department
             </div>
             
-            <!-- Speech Bubble / Chat Box -->
+            <!-- Speech Bubble / Chat Box - STARTS IMMEDIATELY AFTER TITLE -->
             <div class="speech-bubble" data-aos="fade-up" data-aos-delay="500">
                 <div class="welcome-message">
                     <p>
