@@ -737,116 +737,118 @@
         }
         
         /* =========================================== */
-        /* UPDATED WELCOME SECTION - APPLE-STYLE DESIGN */
-        /* =========================================== */
-        #welcome {
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .welcome-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px; /* Reduced gap for tighter layout */
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        /* Circular Profile Image Container - 2X BIGGER */
-        .profile-image-container {
-            position: relative;
-            width: 400px; /* 2x bigger - was 220px */
-            height: 400px; /* 2x bigger - was 220px */
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 12px; /* Slightly thicker border */
-            box-shadow: 0 20px 40px rgba(13, 71, 161, 0.25);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            margin-bottom: 10px; /* Minimal gap below image */
-        }
-        
-        .profile-image-container:hover {
-            transform: scale(1.03);
-            box-shadow: 0 25px 50px rgba(13, 71, 161, 0.3);
-        }
-        
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 6px solid white; /* Thicker border for larger image */
-        }
-        
-        /* Welcome Title - CLOSE TO IMAGE */
-        .welcome-title {
-            font-size: 42px;
-            color: var(--primary-color);
-            margin: 10px 0 0 0; /* Minimal margin above, no margin below */
-            font-weight: 800;
-            text-align: center;
-            line-height: 1.2;
-        }
-        
-        /* President Name - CLOSE TO TITLE */
-        .president-name {
-            color: var(--secondary-color);
-            font-size: 24px;
-            margin: 5px 0 5px 0; /* Very minimal margins */
-            font-weight: 600;
-            text-align: center;
-            line-height: 1.3;
-        }
-        
-        .president-title {
-            color: #666;
-            font-size: 20px;
-            margin: 0 0 30px 0; /* Minimal margin below, then speech bubble starts */
-            font-weight: 500;
-            text-align: center;
-            line-height: 1.4;
-        }
-        
-        /* Speech Bubble / Chat Box */
-        .speech-bubble {
-            position: relative;
-            background: white;
-            border-radius: 20px;
-            padding: 40px 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: left;
-            border-left: 5px solid var(--secondary-color);
-            transition: all 0.3s ease;
-        }
-        
-        .speech-bubble:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-        }
-        
-        /* Welcome Message Text - JUSTIFIED */
-        .welcome-message {
-            line-height: 1.7;
-            font-size: 18px;
-            color: #555;
-            text-align: justify; /* Justified text */
-            text-justify: inter-word; /* Better word spacing for justified text */
-        }
-        
-        .welcome-message p {
-            margin-bottom: 20px;
-        }
-        
-        .welcome-message b {
-            color: var(--primary-color);
-            font-weight: 700;
-        }
+/* UPDATED WELCOME SECTION - APPLE-STYLE DESIGN */
+/* =========================================== */
+#welcome {
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Reduced gap for tighter layout */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Circular Profile Image Container - 2X BIGGER */
+.profile-image-container {
+    position: relative;
+    width: 400px; /* 2x bigger - was 220px */
+    height: 400px; /* 2x bigger - was 220px */
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 12px; /* Slightly thicker border */
+    box-shadow: 0 20px 40px rgba(13, 71, 161, 0.25);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-bottom: 10px; /* Minimal gap below image */
+}
+
+.profile-image-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 25px 50px rgba(13, 71, 161, 0.3);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white; /* Thicker border for larger image */
+}
+
+/* Welcome Title - CLOSE TO IMAGE */
+.welcome-title {
+    font-size: 42px;
+    color: var(--primary-color);
+    margin: 10px 0 0 0; /* Minimal margin above, no margin below */
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* President Name - CLOSE TO TITLE */
+.president-name {
+    color: var(--secondary-color);
+    font-size: 24px;
+    margin: 5px 0 5px 0; /* Very minimal margins */
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.president-title {
+    color: #666;
+    font-size: 20px;
+    margin: 0 0 30px 0; /* Minimal margin below, then speech bubble starts */
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Speech Bubble / Chat Box */
+.speech-bubble {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    padding: 40px 50px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    border-left: 5px solid var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.speech-bubble:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Welcome Message Text - JUSTIFIED */
+.welcome-message {
+    line-height: 1.7;
+    font-size: 18px;
+    color: #555;
+    text-align: justify; /* Justified text */
+    text-justify: inter-word; /* Better word spacing for justified text */
+}
+
+.welcome-message p {
+    margin-bottom: 20px;
+}
+
+.welcome-message b {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Responsive CSS for welcome section continues... */
         
         /* CONFERENCE DETAILS */
         #details {
